@@ -3,8 +3,7 @@ const db = require('../db');
 module.exports.getAllStudents = async () => {
     const [records] =  await db.query("SELECT * FROM students");
     return records;
-;
-}
+};
 
 module.exports.getStudentById = async (id) => {
     const [[record]] =  await db.query("SELECT * FROM students WHERE id = ?", [id]);          
